@@ -28,20 +28,20 @@ public class NotLoginUser extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                String FILENAME = "hello_file.txt";
-//                String string = "hello world!";
-//
-//                FileOutputStream fos = null;
-//                try {
-//                    fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
-//                    fos.write(string.getBytes());
-//                    fos.close();
-//                } catch (FileNotFoundException e) {
-//                    e.printStackTrace();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-                Log.e("test","demo123");
+                String FILENAME = "hello_file.txt";
+                String string = "hello world!";
+
+                FileOutputStream fos = null;
+                try {
+                    fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
+                    fos.write(string.getBytes());
+                    fos.close();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Log.e("test","demo1");
             }
         });
 
