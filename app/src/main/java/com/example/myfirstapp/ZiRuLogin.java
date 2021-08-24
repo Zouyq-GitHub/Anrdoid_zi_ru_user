@@ -2,7 +2,14 @@ package com.example.myfirstapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,10 +20,20 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.myfirstapp.entity.User;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import org.json.JSONObject;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 import static com.example.myfirstapp.MainActivity.EXTRA_MESSAGE;
 
@@ -33,6 +50,53 @@ public class ZiRuLogin extends AppCompatActivity {
 
     //跳转登录的逻辑
     public void goToLogin(View view) {
+        //发送请求 通过手机号查询用户信息
+        FormBody.Builder params = new FormBody.Builder();
+        //post参数
+        params.add("phoneNumber", "18990027415");
+        OkHttpClient okHttpClient = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url("http://192.168.85.173:8080/api/loginState")
+                .post(params.build())
+                .build();
+        Call call = okHttpClient.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onResponse(Call arg0, Response response) throws IOException {
+                //success
+                String res = response.body().string();
+                Log.e("dada:", res);
+                //数据录入login.txt   MODE_PRIVATE:数据重置-私有访问
+                FileOutputStream outputStream = openFileOutput("login.txt", Context.MODE_PRIVATE);
+                //数据录入-刷新
+                outputStream.write(res.getBytes());
+                outputStream.flush();
+                Log.e("数据录入", "true");
+                //数据存入实体类
+                User user = new User();
+                //test
+
+//                Gson gson;
+//                GsonBuilder builder;
+//
+//                //这两句代码必须的，为的是初始化出来gson这个对象，才能拿来用
+//                builder = new GsonBuilder();
+//                gson = builder.create();
+//
+//                user = gson.fromJson(response.body().string(), User.class);
+//                Log.e("test", user.getU_name());
+
+
+                //---
+            }
+
+            @Override
+            public void onFailure(Call arg0, IOException arg1) {
+                //Error
+                System.out.println("Error");
+            }
+        });
+        //页面跳转
         Intent intent = new Intent(this, NotLoginUser.class);
         startActivity(intent);
     }
@@ -68,5 +132,4 @@ public class ZiRuLogin extends AppCompatActivity {
             }
         });
     }
-
 }

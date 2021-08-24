@@ -78,14 +78,14 @@ public class test_interaction extends AppCompatActivity {
                 // 方法3 测试  get请求  带参数 与不带参数 取决于.url的值
                 FormBody.Builder params = new FormBody.Builder();
                 //post参数
-                //params.add("pageNumber", "1");
+                params.add("phoneNumber", "18990027415");
                 OkHttpClient okHttpClient = new OkHttpClient();
                 Request request = new Request.Builder()
                         //
-                        .url("http://192.168.85.173:8080/api/testPost?u_id=1")
-                        .get()
+                        .url("http://192.168.85.173:8080/api/loginState")
+//                        .get()
                         //  post方法
-                        //.post(params.build())
+                        .post(params.build())
                         .build();
                 Call call = okHttpClient.newCall(request);
                 call.enqueue(new Callback() {
