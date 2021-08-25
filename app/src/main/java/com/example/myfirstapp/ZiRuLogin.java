@@ -30,6 +30,7 @@ import com.example.myfirstapp.entity.User;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.FileOutputStream;
@@ -65,7 +66,8 @@ public class ZiRuLogin extends AppCompatActivity {
             public void onResponse(Call arg0, Response response) throws IOException {
                 //success
                 String res = response.body().string();
-                Log.e("dada:", res);
+//                Log.e("dada:", res);
+                System.out.println("data:"+res);
                 //数据录入login.txt   MODE_PRIVATE:数据重置-私有访问
                 FileOutputStream outputStream = openFileOutput("login.txt", Context.MODE_PRIVATE);
                 //数据录入-刷新
@@ -78,14 +80,22 @@ public class ZiRuLogin extends AppCompatActivity {
 
 //                Gson gson;
 //                GsonBuilder builder;
-//
-//                //这两句代码必须的，为的是初始化出来gson这个对象，才能拿来用
+                //这两句代码必须的，为的是初始化出来gson这个对象，才能拿来用
 //                builder = new GsonBuilder();
-//                gson = builder.create();
+                Gson gson = new Gson();
+                user = gson.fromJson(res, User.class);
+                Log.e("test", user.getU_name());
+//                try {//将json数据进行解析
+//                    JSONObject resp = new JSONObject(res);
+//                    String qfriemd = resp.getString("u_id");
+//                    String datetime = resp.getString("u_name");
+//                    String summary = resp.getString("u_imgae");
+//                    Log.e("summary",summary);
 //
-//                user = gson.fromJson(response.body().string(), User.class);
-//                Log.e("test", user.getU_name());
-
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+                Log.e("user:",user.toString());
 
                 //---
             }
