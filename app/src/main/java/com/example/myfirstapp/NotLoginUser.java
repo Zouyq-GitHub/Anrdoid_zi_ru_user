@@ -9,10 +9,13 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.myfirstapp.entity.User;
+import com.example.myfirstapp.util.UpdateImg;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -127,10 +130,11 @@ public class NotLoginUser extends AppCompatActivity {
             //改VIP
             textView1.setText("VIP等级: " + vip);
             //改头像
-            //获取当前资源id
-            int theImg_id = getResources().getIdentifier(img, "drawable", getPackageName());
-            //修改数据
-            imageView.setImageResource(theImg_id);
+            UpdateImg updateImg = new UpdateImg();
+            //传入参数给图片对象
+            updateImg.imageView = imageView;
+            //实现方法传入图片地址
+            updateImg.bySrcUpdateImg(img);
         }
     }
 }
