@@ -66,38 +66,28 @@ public class ZiRuLogin extends AppCompatActivity {
             public void onResponse(Call arg0, Response response) throws IOException {
                 //success
                 String res = response.body().string();
-//                Log.e("dada:", res);
-                System.out.println("data:"+res);
                 //数据录入login.txt   MODE_PRIVATE:数据重置-私有访问
                 FileOutputStream outputStream = openFileOutput("login.txt", Context.MODE_PRIVATE);
                 //数据录入-刷新
                 outputStream.write(res.getBytes());
                 outputStream.flush();
-                Log.e("数据录入", "true");
                 //数据存入实体类
                 User user = new User();
                 //test
-
-//                Gson gson;
-//                GsonBuilder builder;
-                //这两句代码必须的，为的是初始化出来gson这个对象，才能拿来用
-//                builder = new GsonBuilder();
+                //用gson实现
                 Gson gson = new Gson();
                 user = gson.fromJson(res, User.class);
-                Log.e("test", user.getU_name());
-//                try {//将json数据进行解析
-//                    JSONObject resp = new JSONObject(res);
-//                    String qfriemd = resp.getString("u_id");
-//                    String datetime = resp.getString("u_name");
-//                    String summary = resp.getString("u_imgae");
-//                    Log.e("summary",summary);
-//
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-                Log.e("user:",user.toString());
-
-                //---
+                //页面跳转
+                Intent intent = new Intent(ZiRuLogin.this, NotLoginUser.class);
+                //传用户对象做登录验证及信息录入
+                Bundle bundle = new Bundle();//声明一个Bundle对象，用来存放数据
+                bundle.putString("u_id", user.getU_id());//为bundle添加数据
+                bundle.putString("u_image", user.getU_image());
+                bundle.putString("u_name", user.getU_name());
+                bundle.putString("u_phone", user.getU_phone());
+                bundle.putString("u_vip", user.getU_vip());
+                intent.putExtras(bundle);//将这个bundle绑定在intent上
+                startActivity(intent);
             }
 
             @Override
@@ -106,9 +96,7 @@ public class ZiRuLogin extends AppCompatActivity {
                 System.out.println("Error");
             }
         });
-        //页面跳转
-        Intent intent = new Intent(this, NotLoginUser.class);
-        startActivity(intent);
+
     }
 
     //字体颜色的设置

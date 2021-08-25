@@ -1,12 +1,23 @@
 package com.example.myfirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.myfirstapp.entity.User;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
 import java.io.FileInputStream;
 
 
@@ -28,13 +39,13 @@ public class NotLoginUser extends AppCompatActivity {
             public void onClick(View view) {
                 //调用方法判断用户登录状态 登录跳消息 未登录跳登录
                 boolean loginState = loginState();
-//                if (loginState) {
-//                    Intent intent = new Intent(NotLoginUser.this, test_interaction.class);
-//                    startActivity(intent);
-//                } else {
-//                    Intent intent = new Intent(NotLoginUser.this, ZiRuLogin.class);
-//                    startActivity(intent);
-//                }
+                if (loginState) {
+                    Intent intent = new Intent(NotLoginUser.this, test_interaction.class);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(NotLoginUser.this, ZiRuLogin.class);
+                    startActivity(intent);
+                }
             }
         });
     }
@@ -71,16 +82,58 @@ public class NotLoginUser extends AppCompatActivity {
             while ((len = inputStream.read(bytes)) != -1) {
                 sb.append(new String(bytes, 0, len));
             }
-            Log.e("读取到的数据", sb.toString());
-            //进行登录验证
-            if (sb.toString() != null) {
-                return true;
-            } else {
-                return false;
-            }
+            //进行登录验证 文本和传入的用户id
+            Intent intent = getIntent();//声明一个对象，并获得跳转过来的Intent对象
+            //从intent对象中获得bundle对象
+            Bundle bundle = intent.getExtras();
+            //从bundle对象中提取数据
+            String user_id = bundle.getString("u_id");
+            Log.e("传过来的id：", user_id);
+            //将json数据进行解析
+            JSONObject resp = new JSONObject(sb.toString());
+            String u_id = resp.getString("u_id");
+            //登录判断 文档id和用户实体类id
+            Log.e("文档：", u_id);
+            return user_id.equals(u_id);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return false;
+    }
+
+    //初次到页面监听用户是否登录
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Boolean loginState = loginState();
+        Log.e("判断结果:", String.valueOf(loginState));
+        //实例化用户对象
+        User user = new User();
+        if (loginState) {
+            //登录的情况下 改变信息  获取id
+            TextView textView = findViewById(R.id.userStorage);
+            TextView textView1 = findViewById(R.id.userNotStorage);
+            ImageView imageView = findViewById(R.id.user_Img);
+            //获取用户名
+            Intent intent = getIntent();
+            //从intent对象中获得bundle对象
+            Bundle bundle = intent.getExtras();
+            //从bundle对象中提取数据
+            String name = bundle.getString("u_name");
+            String img = bundle.getString("u_image");
+            String vip = bundle.getString("u_vip");
+            //修改用户名
+            textView.setText(name);
+            //改VIP
+            textView1.setText("VIP等级: " + vip);
+            //改头像
+//            String path = Environment.getExternalStorageDirectory() + File.separator + img;
+//            imageView.setImageResource(R.drawable.xiao_mi);
+//            imageView.setImageResource(img);
+//            img="xiao_mi";
+//            System.out.printf("0x%X", Integer.parseInt(img.substring(2, img.length()), 16));
+//            System.out.println("测试一下字符串转的"+Integer.parseInt(img));
+
+        }
     }
 }

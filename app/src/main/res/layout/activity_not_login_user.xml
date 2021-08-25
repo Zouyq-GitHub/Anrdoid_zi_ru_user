@@ -79,6 +79,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/user_Img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -100,6 +101,7 @@
                         android:textSize="17dp" />
 
                     <TextView
+                        android:id="@+id/userNotStorage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
