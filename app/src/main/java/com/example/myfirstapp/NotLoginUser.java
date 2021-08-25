@@ -127,13 +127,10 @@ public class NotLoginUser extends AppCompatActivity {
             //改VIP
             textView1.setText("VIP等级: " + vip);
             //改头像
-//            String path = Environment.getExternalStorageDirectory() + File.separator + img;
-//            imageView.setImageResource(R.drawable.xiao_mi);
-//            imageView.setImageResource(img);
-//            img="xiao_mi";
-//            System.out.printf("0x%X", Integer.parseInt(img.substring(2, img.length()), 16));
-//            System.out.println("测试一下字符串转的"+Integer.parseInt(img));
-
+            //获取当前资源id
+            int theImg_id = getResources().getIdentifier(img, "drawable", getPackageName());
+            //修改数据
+            imageView.setImageResource(theImg_id);
         }
     }
 }
