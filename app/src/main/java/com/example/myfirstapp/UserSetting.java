@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 
 public class UserSetting extends AppCompatActivity {
 
@@ -23,11 +25,8 @@ public class UserSetting extends AppCompatActivity {
         System.out.println(loginState);
         if (loginState != null && loginState.equals("true")) {
             //有退出登录选项
-            Log.e("loginButton", "yes");
-        } else {
-            //无选项
-            Log.e("loginButton", "no");
+            LinearLayout layout = findViewById(R.id.notLogin);
+            layout.setVisibility(View.VISIBLE);
         }
-
     }
 }

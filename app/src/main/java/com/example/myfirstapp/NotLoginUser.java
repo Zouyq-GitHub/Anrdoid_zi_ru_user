@@ -81,7 +81,9 @@ public class NotLoginUser extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //用户名点击（废弃）
+                Intent intent = new Intent(NotLoginUser.this, ZiRuLogin.class);
+                //跳转
+                startActivity(intent);
             }
         });
     }
