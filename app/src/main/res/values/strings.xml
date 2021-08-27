@@ -14,4 +14,7 @@
     <string name="d_q_b_b">当前版本</string>
     <string name="t_c_d_l">退出登录</string>
     <string name="b_b_h">7.3.3</string>
+    <string name="y_s_s_z">隐私设置</string>
+    <string name="x_t_q_x">系统权限管理</string>
+    <string name="q_c_h_c">清除缓存</string>
 </resources>
