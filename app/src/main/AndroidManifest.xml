@@ -11,23 +11,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".imgimgimgimg"
+            android:name=".UserSetting"
             android:exported="true" >
-        </activity>
-        <activity
-            android:name=".test_interaction"
-            android:exported="true"></activity>
-        <activity
-            android:name=".NotLoginUser"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".ZiRuLogin"
-            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".imgimgimgimg"
+            android:exported="true" />
+        <activity
+            android:name=".test_interaction"
+            android:exported="true" />
+        <activity
+            android:name=".NotLoginUser"
+            android:exported="true" />
+        <activity
+            android:name=".ZiRuLogin"
+            android:exported="true">
         </activity>
         <activity
             android:name=".demo1"

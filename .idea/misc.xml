@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.10833333333333334" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable/border_radius.xml" value="0.10555555555555556" />
+        <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable/home_user_phone_background.xml" value="0.10833333333333334" />
+        <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable/hr.xml" value="0.1" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable/jia_fu_a.xml" value="0.11041666666666666" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable/jia_fu_b.xml" value="0.11041666666666666" />

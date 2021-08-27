@@ -32,6 +32,7 @@ public class NotLoginUser extends AppCompatActivity {
         setContentView(R.layout.activity_not_login_user);
         userStorage();
         gotoLoginPage();
+        sheZhiIcon();
     }
 
     //用户消息通知
@@ -53,6 +54,26 @@ public class NotLoginUser extends AppCompatActivity {
         });
     }
 
+    //用户设置效果
+    private void sheZhiIcon() {
+        //获取图标id
+        ImageView imageView = findViewById(R.id.she_zhi_icon);
+        //点击事件
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //设置的点击事件 点击跳转设置的页面 但是要判断是否登录
+                //判断登录 如果登录状态就传参 不然就不用传
+                Intent intent = new Intent(NotLoginUser.this, UserSetting.class);
+                if (loginState()) {
+                    intent.putExtra("loginState", "true");
+                }
+                //跳转
+                startActivity(intent);
+            }
+        });
+    }
+
     //用户跳转登录
     private void gotoLoginPage() {
         // 点击登录-注册
@@ -60,13 +81,7 @@ public class NotLoginUser extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //跳转
-//                Intent intent = new Intent(NotLoginUser.this, ZiRuLogin.class);
-//                startActivity(intent);
-
-                //test 试试实体类
-                TestEntity testEntity = new TestEntity();
-                testEntity.init();
+                //用户名点击（废弃）
             }
         });
     }
@@ -128,7 +143,8 @@ public class NotLoginUser extends AppCompatActivity {
             //修改用户名
             textView.setText(name);
             //改VIP
-            textView1.setText("VIP等级: " + vip);
+            String vips = "VIP等级" + vip;
+            textView1.setText(vips);
             //改头像
             UpdateImg updateImg = new UpdateImg();
             //传入参数给图片对象

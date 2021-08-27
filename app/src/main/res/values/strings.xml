@@ -2,4 +2,14 @@
     <string name="app_name">MyFirstAPP</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">send</string>
+    <string name="she_zhi">设置</string>
+    <string name="ge_ren_xin_xi">个人信息</string>
+    <string name="da_yu">＞</string>
+    <string name="z_h_x_x_g_l">账号信息管理</string>
+    <string name="s_q_h_d_s_z">社区活动设置</string>
+    <string name="x_x_x_t_z">新消息通知</string>
+    <string name="y_k_q_h_g_b_x_x_t_z">要开启或关闭消息通知,请在手机设置-通知-自如中更...</string>
+    <string name="t_y">通用</string>
+    <string name="g_y_w_m">关于我们</string>
+    <string name="d_q_b_b">当前版本</string>
 </resources>
