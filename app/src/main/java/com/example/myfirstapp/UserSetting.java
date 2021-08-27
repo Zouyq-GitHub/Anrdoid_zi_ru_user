@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myfirstapp.entity.User;
+import com.example.myfirstapp.util.Notice;
 
 import java.io.FileOutputStream;
 
@@ -159,6 +160,19 @@ public class UserSetting extends AppCompatActivity {
             }
         });
     }
+
+    //新消息通知
+//    private void alerts(){
+//        //获取点击事件
+//        RelativeLayout relativeLayout = findViewById(R.id.x_x_x_t_z);
+//        relativeLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                Notice notice = new Notice();
+////                notice.sendSubscribeMsg(view);
+//            }
+//        });
+//    }
 
     //跳转用户页面
     private void goToUserHome() {
