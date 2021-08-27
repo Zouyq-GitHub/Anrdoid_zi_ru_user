@@ -43,13 +43,13 @@ public class NotLoginUser extends AppCompatActivity {
             public void onClick(View view) {
                 //调用方法判断用户登录状态 登录跳消息 未登录跳登录
                 boolean loginState = loginState();
+                Intent intent;
                 if (loginState) {
-                    Intent intent = new Intent(NotLoginUser.this, test_interaction.class);
-                    startActivity(intent);
+                    intent = new Intent(NotLoginUser.this, test_interaction.class);
                 } else {
-                    Intent intent = new Intent(NotLoginUser.this, ZiRuLogin.class);
-                    startActivity(intent);
+                    intent = new Intent(NotLoginUser.this, ZiRuLogin.class);
                 }
+                startActivity(intent);
             }
         });
     }
@@ -76,16 +76,19 @@ public class NotLoginUser extends AppCompatActivity {
 
     //用户跳转登录
     private void gotoLoginPage() {
-        // 点击登录-注册
-        TextView textView = findViewById(R.id.userStorage);
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(NotLoginUser.this, ZiRuLogin.class);
-                //跳转
-                startActivity(intent);
-            }
-        });
+        //点击登录-注册
+        //如果已经登录该功能不实现
+        if (!loginState()) {
+            TextView textView = findViewById(R.id.userStorage);
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(NotLoginUser.this, ZiRuLogin.class);
+                    //跳转
+                    startActivity(intent);
+                }
+            });
+        }
     }
 
     //验证是否登录方法  判断用户登录状态
@@ -106,9 +109,13 @@ public class NotLoginUser extends AppCompatActivity {
             Intent intent = getIntent();//声明一个对象，并获得跳转过来的Intent对象
             //从intent对象中获得bundle对象
             Bundle bundle = intent.getExtras();
-            //从bundle对象中提取数据
-            String user_id = bundle.getString("u_id");
-            Log.e("传过来的id：", user_id);
+            //从bundle对象中提取数据 空指针异常
+            String user_id;
+            if (bundle == null) {
+                return false;
+            } else {
+                user_id = bundle.getString("u_id");
+            }
             //将json数据进行解析
             JSONObject resp = new JSONObject(sb.toString());
             String u_id = resp.getString("u_id");
