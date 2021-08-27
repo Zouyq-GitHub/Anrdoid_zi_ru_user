@@ -1,14 +1,17 @@
 package com.example.myfirstapp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myfirstapp.entity.User;
 
@@ -44,20 +47,39 @@ public class UserSetting extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.e("点击退出登录","true");
-                try {
-                    //清空文档
-                    FileOutputStream outputStream = openFileOutput("login.txt", Context.MODE_PRIVATE);
-                    //数据录入-刷新
-                    outputStream.write("".getBytes());
-                    outputStream.flush();
-                    //页面跳用户主页
-                    Intent intent = new Intent(UserSetting.this, NotLoginUser.class);
-                    //跳转
-                    startActivity(intent);
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
+                //弹出框让用户进行选择是否退出  Dialog弹出框
+//                //自定义样式
+//                View view1 = View.inflate(UserSetting.this, R.layout.activity_layout_dialog, null);
+                AlertDialog alertDialog2 = new AlertDialog.Builder(UserSetting.this)
+                        .setTitle("提示")
+                        .setMessage("是否退出当前账户")
+                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {//添加"Yes"按钮
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //文档数据页面跳转操作
+                                try {
+                                    //清空文档
+                                    FileOutputStream outputStream = openFileOutput("login.txt", Context.MODE_PRIVATE);
+                                    //数据录入-刷新
+                                    outputStream.write("".getBytes());
+                                    outputStream.flush();
+                                    //页面跳用户主页
+                                    Intent intent = new Intent(UserSetting.this, NotLoginUser.class);
+                                    //跳转
+                                    startActivity(intent);
+                                }catch (Exception e){
+                                    e.printStackTrace();
+                                }
+                            }
+                        })
+
+                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {//添加取消
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                            }
+                        })
+                        .create();
+                alertDialog2.show();
 
             }
         });
