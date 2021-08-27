@@ -160,6 +160,12 @@ public class NotLoginUser extends AppCompatActivity {
             updateImg.imageView = imageView;
             //实现方法传入图片地址
             updateImg.bySrcUpdateImg(img);
+            //自如客时光计划
+            TextView textView2 = findViewById(R.id.textClickLogin);
+            TextView textView3 = findViewById(R.id.lookYourVip);
+            //占位置但不显示
+            textView2.setVisibility(View.INVISIBLE);
+            textView3.setVisibility(View.INVISIBLE);
         }
     }
 }

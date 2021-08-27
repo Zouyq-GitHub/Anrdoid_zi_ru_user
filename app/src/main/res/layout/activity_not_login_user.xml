@@ -235,6 +235,8 @@
                             android:src="@drawable/zi_ru_ke_shi_guang_ji_hua" />
 
                         <TextView
+                            android:id="@+id/textClickLogin"
+                            android:visibility="visible"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
@@ -245,6 +247,8 @@
                             android:textSize="13dp" />
 
                         <TextView
+                            android:id="@+id/lookYourVip"
+                            android:visibility="visible"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignLeft="@id/zi_ru_time"
