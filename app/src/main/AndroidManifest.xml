@@ -11,11 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".UserData"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".aBoutUs"
             android:exported="true" />
         <activity
             android:name=".General"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".layout_dialog"
             android:exported="true" />
@@ -31,11 +40,7 @@
         <activity
             android:name=".NotLoginUser"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ZiRuLogin"

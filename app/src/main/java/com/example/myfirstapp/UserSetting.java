@@ -105,8 +105,10 @@ public class UserSetting extends AppCompatActivity {
                 if (!loginState()) {
                     goToUserHome();
                 } else {
-                    //实现具体逻辑
-                    Log.e("实现个人信息逻辑", "ture");
+                    //通用页面跳转设置
+                    Intent intent = new Intent(UserSetting.this, UserData.class);
+                    //跳转
+                    startActivity(intent);
                 }
             }
         });
