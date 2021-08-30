@@ -13,11 +13,6 @@
         <activity
             android:name=".UserData"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".aBoutUs"
@@ -30,7 +25,13 @@
             android:exported="true" />
         <activity
             android:name=".UserSetting"
-            android:exported="true" />
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".imgimgimgimg"
             android:exported="true" />
