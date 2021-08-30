@@ -145,8 +145,10 @@ public class UserSetting extends AppCompatActivity {
                 if (!loginState()) {
                     goToUserHome();
                 } else {
-                    //实现具体逻辑
-                    Log.e("实现社区活动逻辑", "ture");
+                    //通用页面跳转设置
+                    Intent intent = new Intent(UserSetting.this, AccountInformationManagement.class);
+                    //跳转
+                    startActivity(intent);
                 }
             }
         });
@@ -168,7 +170,7 @@ public class UserSetting extends AppCompatActivity {
     }
 
     //关于我们
-    private void aboutUs(){
+    private void aboutUs() {
         //点击事件
         RelativeLayout relativeLayout = findViewById(R.id.g_y_w_m);
         relativeLayout.setOnClickListener(new View.OnClickListener() {

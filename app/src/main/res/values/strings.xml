@@ -35,4 +35,7 @@
     <string name="q_x_g">去修改</string>
     <string name="z_x_z_h">注销账号</string>
     <string name="z_h_z_x_w_f_h_f">账号将永久注销，无法恢复</string>
+    <string name="Meeta_Activity">是否开启Meeta活动</string>
+    <string name="q_p_x_q">是否开启气泡星球</string>
+    <string name="Meeta_Friend">是否开启Meeta交友</string>
 </resources>
