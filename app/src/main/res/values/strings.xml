@@ -26,4 +26,13 @@
     <string name="z_j_x_x">证件信息</string>
     <string name="z_z_x_x">资质信息</string>
     <string name="x_l_x_x_">学历信息</string>
+    <string name="y_h_m">用户名</string>
+    <string name="s_j_h">手机号</string>
+    <string name="y_x">邮箱</string>
+    <string name="d_l_m_m">登录密码</string>
+    <string name="q_s_z">去设置</string>
+    <string name="q_b_d">去绑定</string>
+    <string name="q_x_g">去修改</string>
+    <string name="z_x_z_h">注销账号</string>
+    <string name="z_h_z_x_w_f_h_f">账号将永久注销，无法恢复</string>
 </resources>
