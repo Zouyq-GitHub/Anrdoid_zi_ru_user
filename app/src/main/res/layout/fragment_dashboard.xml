@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/not_user_login_background_color"
-    tools:context=".NotLoginUser">
+    tools:context=".ui.dashboard.DashboardFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -26,7 +25,7 @@
                 android:paddingTop="15dp">
 
                 <ImageView
-                    android:id="@+id/she_zhi_icon"
+                    android:id="@+id/she_zhi_icon_fra"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginRight="11dp"
@@ -48,7 +47,6 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="15dp"
                     android:src="@drawable/xiao_xi" />
-
                 <ImageView
                     android:id="@+id/qie_huan"
                     android:layout_width="25dp"
@@ -76,7 +74,6 @@
             android:layout_height="wrap_content"
             android:background="#FAE6CD"
             android:orientation="vertical">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -85,24 +82,25 @@
                 <LinearLayout
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_marginLeft="12dp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginLeft="12dp"
                     android:background="@drawable/home_user_phone_background"
+                    android:orientation="vertical"
                     android:gravity="center"
-                    android:orientation="vertical">
-
+                    >
                     <com.example.myfirstapp.Img_border_radius
                         android:id="@+id/user_Img"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
+                        android:src="@drawable/ic_baseline_account_circle_24"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/user_img" />
+                        />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -238,6 +236,7 @@
 
                         <TextView
                             android:id="@+id/textClickLogin"
+                            android:visibility="visible"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
@@ -245,19 +244,18 @@
                             android:layout_marginTop="17dp"
                             android:text="点击登录 >"
                             android:textColor="@color/white"
-                            android:textSize="13dp"
-                            android:visibility="visible" />
+                            android:textSize="13dp" />
 
                         <TextView
                             android:id="@+id/lookYourVip"
+                            android:visibility="visible"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignLeft="@id/zi_ru_time"
                             android:layout_below="@id/zi_ru_time"
                             android:layout_marginTop="-5dp"
                             android:text="登录查看您的会员等级"
-                            android:textColor="@color/white"
-                            android:visibility="visible" />
+                            android:textColor="@color/white" />
                     </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -914,8 +912,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
-                android:layout_marginBottom="30dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
                 android:background="@drawable/user_view_my_home_border_radius"
                 android:orientation="vertical">
 
@@ -935,28 +933,34 @@
                         android:orientation="vertical">
 
                         <!--我的社区活动嵌套-->
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="20dp"
-                            android:background="@drawable/she_qu_sheng_huo_button"
-                            android:text="进入社区生活"
-                            android:textColor="#666666"></Button>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:text="我的社区活动"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
                         <!--装3个图标框 -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:orientation="horizontal"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
-                            android:layout_marginTop="20dp"
-                            android:orientation="horizontal">
+                            android:layout_marginTop="20dp">
                             <!--每个小框1 -->
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:orientation="vertical">
-
+                                android:orientation="vertical"
+                                >
                                 <ImageView
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
@@ -976,10 +980,10 @@
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_marginLeft="20dp"
                                 android:layout_weight="1"
-                                android:orientation="vertical">
-
+                                android:orientation="vertical"
+                                android:layout_marginLeft="20dp"
+                                >
                                 <ImageView
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
@@ -999,10 +1003,10 @@
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_marginLeft="20dp"
                                 android:layout_weight="1"
-                                android:orientation="vertical">
-
+                                android:orientation="vertical"
+                                android:layout_marginLeft="20dp"
+                                >
                                 <ImageView
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
@@ -1020,41 +1024,18 @@
                             </LinearLayout>
                         </LinearLayout>
                         <!--进入社区生活按钮-->
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
-                                android:text="我的社区活动"
-                                android:textColor="@color/black"
-                                android:textSize="16dp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
+                        <Button
+                            android:id="@+id/s_q_s_h_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="进入社区生活"
+                            android:background="@drawable/she_qu_sheng_huo_button"
+                            android:layout_marginTop="20dp"
+                            android:textColor="#666666">
+                        </Button>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-        <!--        <FrameLayout-->
-        <!--            android:id="@+id/fragmentContainer"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="match_parent"-->
-        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toTopOf="parent" />-->
-        <!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
-        <!--            android:id="@+id/nav_view"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginEnd="0dp"-->
-        <!--            android:layout_marginStart="0dp"-->
-        <!--            android:background="?android:attr/windowBackground"-->
-        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--            app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--            app:layout_constraintRight_toRightOf="parent"-->
-        <!--            app:menu="@menu/bottom_nav_menu" />-->
     </LinearLayout>
 </ScrollView>

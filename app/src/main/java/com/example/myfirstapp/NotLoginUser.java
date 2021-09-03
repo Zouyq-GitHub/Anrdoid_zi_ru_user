@@ -1,6 +1,8 @@
 package com.example.myfirstapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -8,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -15,7 +18,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.myfirstapp.entity.User;
+import com.example.myfirstapp.ui.dashboard.DashboardFragment;
+import com.example.myfirstapp.ui.home.HomeFragment;
 import com.example.myfirstapp.util.UpdateImg;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,9 +36,32 @@ public class NotLoginUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_not_login_user);
-        userStorage();
-        gotoLoginPage();
-        sheZhiIcon();
+//        userStorage();
+//        gotoLoginPage();
+//        sheZhiIcon();
+//        Fragment fragment = getFragmentManager().findFragmentById(R.id.fr)
+        //fra
+//        BottomNavigationView btmNavView;
+//        btmNavView = findViewById(R.id.nav_view);
+//        if (savedInstanceState == null) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new HomeFragment());
+//        }
+//        btmNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                Fragment fragment = null;
+//                switch (item.getItemId()) {
+//                    case R.id.navigation_home:
+//                        fragment = new HomeFragment();
+//                        break;
+//                    case R.id.navigation_dashboard:
+//                        fragment = new DashboardFragment();
+//                        break;
+//                }
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, fragment).commit();
+//                return true;
+//            }
+//        });
     }
 
     //用户消息通知

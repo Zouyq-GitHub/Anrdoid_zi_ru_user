@@ -38,4 +38,9 @@
     <string name="Meeta_Activity">是否开启Meeta活动</string>
     <string name="q_p_x_q">是否开启气泡星球</string>
     <string name="Meeta_Friend">是否开启Meeta交友</string>
+    <string name="title_activity_buttom_tabar">buttom_tabar</string>
+    <string name="title_home">首页</string>
+    <string name="title_user">我的</string>
+    <string name="title_house">找房单</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

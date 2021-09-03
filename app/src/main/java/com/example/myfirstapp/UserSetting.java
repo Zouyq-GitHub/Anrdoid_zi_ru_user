@@ -2,6 +2,7 @@ package com.example.myfirstapp;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,6 +15,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.myfirstapp.ui.dashboard.DashboardFragment;
 
 import java.io.FileOutputStream;
 
@@ -68,7 +71,7 @@ public class UserSetting extends AppCompatActivity {
                                     //数据录入-刷新
                                     outputStream.write("".getBytes());
                                     outputStream.flush();
-                                    //页面跳用户主页
+                                    //页面跳用户页
                                     goToUserHome();
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -146,7 +149,7 @@ public class UserSetting extends AppCompatActivity {
                     goToUserHome();
                 } else {
                     //通用页面跳转设置
-                    Intent intent = new Intent(UserSetting.this, AccountInformationManagement.class);
+                    Intent intent = new Intent(UserSetting.this, CommunityActivitySetting.class);
                     //跳转
                     startActivity(intent);
                 }
@@ -259,8 +262,10 @@ public class UserSetting extends AppCompatActivity {
 
     //跳转用户页面
     private void goToUserHome() {
-        Intent intent = new Intent(UserSetting.this, NotLoginUser.class);
-        //跳转
+        Intent intent = new Intent(UserSetting.this, Index.class);
+        intent.putExtra("id",2);
         startActivity(intent);
+//        Fragment fragment = new DashboardFragment();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, fragment).commit();
     }
 }

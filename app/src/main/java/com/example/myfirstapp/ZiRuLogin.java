@@ -78,7 +78,10 @@ public class ZiRuLogin extends AppCompatActivity {
                 Gson gson = new Gson();
                 user = gson.fromJson(res, User.class);
                 //页面跳转
-                Intent intent = new Intent(ZiRuLogin.this, NotLoginUser.class);
+//                Intent intent = new Intent(ZiRuLogin.this, NotLoginUser.class);
+                Intent intent = new Intent(ZiRuLogin.this, Index.class);
+                intent.putExtra("id",2);
+                //跳转
                 //传用户对象做登录验证及信息录入
                 Bundle bundle = new Bundle();//声明一个Bundle对象，用来存放数据
                 bundle.putString("u_id", user.getU_id());//为bundle添加数据
