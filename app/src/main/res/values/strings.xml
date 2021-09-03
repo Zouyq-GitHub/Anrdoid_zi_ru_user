@@ -43,4 +43,6 @@
     <string name="title_user">我的</string>
     <string name="title_house">找房单</string>
     <string name="title_notifications">Notifications</string>
+    <string name="addressChen_Du">成都</string>
+    <string name="addressIcon">▽</string>
 </resources>

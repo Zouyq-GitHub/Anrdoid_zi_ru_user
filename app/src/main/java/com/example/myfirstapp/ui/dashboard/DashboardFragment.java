@@ -21,7 +21,6 @@ import com.example.myfirstapp.NotLoginUser;
 import com.example.myfirstapp.R;
 import com.example.myfirstapp.UserSetting;
 import com.example.myfirstapp.ZiRuLogin;
-import com.example.myfirstapp.databinding.FragmentDashboardBinding;
 import com.example.myfirstapp.entity.User;
 import com.example.myfirstapp.test_interaction;
 import com.example.myfirstapp.util.UpdateImg;
@@ -198,5 +197,20 @@ public class DashboardFragment extends Fragment {
                 }
             });
         }
+    }
+
+    //
+    private void Doller(){
+        TextView textView = getActivity().findViewById(R.id.userStorage);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ZiRuLogin.class);
+                //跳转
+                startActivity(intent);
+            }
+        });
+        String data[] = new String[56];
+
     }
 }
