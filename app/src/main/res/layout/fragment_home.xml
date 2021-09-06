@@ -1,71 +1,348 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
-
-    <!--开始到带轮播图部分-->
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:background="#1C78FF"
-       android:orientation="vertical">
-    <!-- 搜索框+地址选择+消息通知-->
-    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="30dp"
-        >
-        <RelativeLayout
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        tools:context=".ui.home.HomeFragment">
+
+    <!--大外框-->
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <!--地址选择-->
-            <RelativeLayout
-                android:id="@+id/address_choose"
-                android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <!-- 搜索框+地址选择+消息通知-->
+        <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                >
-                <TextView
-                    android:layout_alignParentStart="true"
-                    android:id="@+id/address"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/addressChen_Du"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15sp"
-                    >
-                </TextView>
-
-                <TextView
-                    android:layout_toRightOf="@id/address"
-                    android:id="@+id/address_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="14sp"
-                    android:text="@string/addressIcon" />
-            </RelativeLayout>
-
-            <!--输入框-->
-            <LinearLayout
-                android:id="@+id/index_search"
-                android:layout_alignEnd="@id/address_choose"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/white_radius_border"
+                android:layout_marginBottom="-15dp"
+                android:background="#3288FF"
                 android:orientation="horizontal"
-                >
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="20dp">
+            <!--地址选择-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal">
+                <!--地址-->
+                <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:text="@string/addressChen_Du"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
+                <!--图标-->
+                <TextView
+                        android:id="@+id/address_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/addressIcon"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
             </LinearLayout>
-        </RelativeLayout>
+
+            <!--中间搜索框-->
+            <LinearLayout
+                    android:id="@+id/search"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/white_radius_border"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="22dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/search" />
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="4"
+                        android:paddingBottom="5dp"
+                        android:text="@string/y_f_y_j"
+                        android:textColor="#959595"
+                        android:textSize="14sp" />
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ding_wei" />
+            </LinearLayout>
+
+            <!--右侧框-->
+            <LinearLayout
+                    android:id="@+id/xiao_xi"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="999999dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="14dp"
+                        android:src="@drawable/index_xiao_xi" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--轮播图-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/index_pic" />
+        </LinearLayout>
+        <!--主页小图标-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+            <!--每一行的小图标集-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="horizontal">
+                <!--小图标-->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/index_icon_s" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/h_z"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+                <!--小图标-->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/index_icon_s" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/h_z"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+                <!--小图标-->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/index_icon_s" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/h_z"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+                <!--小图标-->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/index_icon_s" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/h_z"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--每一行的小图标集-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="horizontal">
+                <!--小图标-->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/index_icon_s" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/h_z"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+                <!--小图标-->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/index_icon_s" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/h_z"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+                <!--小图标-->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/index_icon_s" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/h_z"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+                <!--小图标-->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/index_icon_s" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/h_z"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--第三行-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <!--自如家服-->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="15dp">
+                    <ImageView
+                            android:layout_width="220dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/index_z_r_j_f" />
+                </LinearLayout>
+                <!--自如家服-->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#49A3E8"></LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-
-
-
-   </LinearLayout>
 </ScrollView>

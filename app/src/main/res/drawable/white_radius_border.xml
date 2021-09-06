@@ -12,7 +12,7 @@
         android:right="1dp"
         android:top="1dp" />
     <!--角的话，里边有参数可以单独设置-->
-    <corners android:radius="10dp" />
+    <corners android:radius="3dp" />
 
     <!--实现应用背景颜色渐变-->
     <gradient
