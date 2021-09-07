@@ -363,15 +363,6 @@
                                 android:textColor="#E89334"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
-
-                        <!--                        <TextView-->
-                        <!--                                android:layout_width="wrap_content"-->
-                        <!--                                android:layout_height="wrap_content"-->
-                        <!--                                android:layout_gravity="right"-->
-                        <!--                                android:text=">"-->
-                        <!--                                android:textColor="#E89334"-->
-                        <!--                                android:textSize="12sp"-->
-                        <!--                                android:textStyle="bold" />-->
                     </LinearLayout>
                 </LinearLayout>
                 <!--自如家服-->
@@ -537,43 +528,195 @@
         <!--房屋数据(每一行)-->
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="240dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:orientation="horizontal">
 
             <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/index_data_border_radius"
                     android:orientation="vertical">
-
-                <LinearLayout
+                <!--图片-->
+                <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#000000"
-                        >
-                    <!--图片-->
-                    <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:src="@drawable/index_datas_1" />
-                </LinearLayout>
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/index_datas_1" />
+
+                <!--价格-->
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
                         android:text="￥1234/月"
-                        android:textColor="#000000" />
+                        android:textColor="#FF971C"
+                        android:textSize="16sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="整租1室1厅45㎡"
+                        android:textColor="#222222"
+                        android:textSize="14sp" />
+                <!--智能锁/非首租-->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="智能锁   非首次出租"
+                        android:textColor="#646464"
+                        android:textSize="11sp" />
             </LinearLayout>
 
             <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/index_data_border_radius" />
-        </LinearLayout>
+                    android:background="@drawable/index_data_border_radius"
+                    android:orientation="vertical">
+                <!--图片-->
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/index_datas_1" />
 
+                <!--价格-->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="￥1234/月"
+                        android:textColor="#FF971C"
+                        android:textSize="16sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="5dp"
+                        android:text="整租1室1厅45㎡"
+                        android:textColor="#222222"
+                        android:textSize="14sp" />
+                <!--智能锁/非首租-->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="智能锁   非首次出租"
+                        android:textColor="#646464"
+                        android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--房屋数据(每一行)-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/index_data_border_radius"
+                    android:orientation="vertical">
+                <!--图片-->
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/index_datas_1" />
+
+                <!--价格-->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="￥1234/月"
+                        android:textColor="#FF971C"
+                        android:textSize="16sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="整租1室1厅45㎡"
+                        android:textColor="#222222"
+                        android:textSize="14sp" />
+                <!--智能锁/非首租-->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="智能锁   非首次出租"
+                        android:textColor="#646464"
+                        android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/index_data_border_radius"
+                    android:orientation="vertical">
+                <!--图片-->
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/index_datas_1" />
+
+                <!--价格-->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="￥1234/月"
+                        android:textColor="#FF971C"
+                        android:textSize="16sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="5dp"
+                        android:text="整租1室1厅45㎡"
+                        android:textColor="#222222"
+                        android:textSize="14sp" />
+                <!--智能锁/非首租-->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="智能锁   非首次出租"
+                        android:textColor="#646464"
+                        android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
