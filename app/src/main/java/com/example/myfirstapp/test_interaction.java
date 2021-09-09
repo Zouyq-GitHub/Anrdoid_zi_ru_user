@@ -106,4 +106,6 @@ public class test_interaction extends AppCompatActivity {
             }
         });
     }
+    //列表遍历
+
 }

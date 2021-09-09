@@ -2,6 +2,8 @@ package com.example.myfirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -14,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,5 +46,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
 
+    }
+
+
+    private void initView() {
+//        RecyclerView recyclerView = findViewById(R.id.rv_successive_dynasties_huoying);
+//        // 线性布局管理器
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+//        recyclerView.setLayoutManager(linearLayoutManager);
+        // 用于描述item的适配器
+//        recyclerAdapter = new RecyclerAdapter(huoyingList);
+//        recyclerView.setAdapter(recyclerAdapter);
     }
 }

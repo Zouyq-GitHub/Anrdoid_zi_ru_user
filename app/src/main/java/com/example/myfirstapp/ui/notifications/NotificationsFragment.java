@@ -11,9 +11,16 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfirstapp.R;
+import com.example.myfirstapp.adapter.IndexDataAdapter;
 import com.example.myfirstapp.databinding.FragmentNotificationsBinding;
+import com.example.myfirstapp.entity.House;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NotificationsFragment extends Fragment {
 
@@ -22,20 +29,24 @@ public class NotificationsFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
-
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+        View v = inflater.inflate(R.layout.fragment_notifications, container, false);
+        RecyclerView recyclerView = v.findViewById(R.id.recycler_index_data);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        List<House> dataList = new ArrayList<>();
+        for (int i = 0; i < 8; i++) {
+            House house = new House();
+            house.setH_price("9876");
+            house.setH_address("青羊区");
+            house.setH_space("3室2厅130㎡");
+            house.setH_type("密码锁 锁锁锁锁");
+            dataList.add(house);
+            System.out.println("我循环了几次" + i);
+        }
+        IndexDataAdapter indexDataAdapter = new IndexDataAdapter(getActivity(), dataList);
+        recyclerView.setAdapter(indexDataAdapter);
+        return v;
     }
 
     @Override

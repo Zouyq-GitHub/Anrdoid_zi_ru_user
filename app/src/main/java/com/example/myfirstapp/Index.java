@@ -44,7 +44,7 @@ public class Index extends AppCompatActivity {
                     .commit();
             //按钮状态
             btmNavView.setSelectedItemId(R.id.navigation_dashboard);
-        }else {
+        } else {
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragmentContainer, new HomeFragment())//设置显示fragment

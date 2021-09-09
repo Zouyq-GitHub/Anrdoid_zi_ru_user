@@ -185,7 +185,7 @@ public class NotLoginUser extends AppCompatActivity {
             textView1.setText(vips);
             //改头像
             UpdateImg updateImg = new UpdateImg();
-            //传入参数给图片对象
+            //赋值
             updateImg.imageView = imageView;
             //实现方法传入图片地址
             updateImg.bySrcUpdateImg(img);
