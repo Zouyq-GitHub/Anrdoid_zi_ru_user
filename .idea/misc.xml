@@ -6,6 +6,7 @@
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.10833333333333334" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable/border_radius.xml" value="0.10555555555555556" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable/home_user_phone_background.xml" value="0.10833333333333334" />
+        <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable/house_detailed_right_border.xml" value="0.151171875" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable/hr.xml" value="0.1" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
@@ -27,6 +28,7 @@
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_buttom_tabar.xml" value="0.19085907744392722" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_demo1.xml" value="0.21484375" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_display_message.xml" value="0.33" />
+        <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_house_detailed.xml" value="0.33" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_index.xml" value="0.166796875" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_user_setting.xml" value="0.162890625" />
