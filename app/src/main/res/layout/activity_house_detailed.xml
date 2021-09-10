@@ -1,285 +1,676 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         tools:context=".house_detailed">
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp">
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="万达锦华城"
-                android:textColor="#272727"
-                android:textSize="20sp" />
-    </LinearLayout>
-
-    <!--商品图片展示-->
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="30dp">
-
-        <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="240dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/index_datas_1" />
-    </LinearLayout>
-    <!--商品属性部分-->
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
-        <!--价格-->
+
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:orientation="horizontal">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
 
-            <LinearLayout
+            <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:text="万达锦华城"
+                    android:textColor="#272727"
+                    android:textSize="20sp" />
+        </LinearLayout>
 
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="￥2560  月(季付价)"
-                        android:textSize="22sp" />
-            </LinearLayout>
+        <!--商品图片展示-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp">
 
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/index_datas_1" />
+        </LinearLayout>
+        <!--商品属性部分-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+            <!--价格-->
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="right">
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
 
-                <TextView
+                <LinearLayout
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥2560  月(季付价)"
+                            android:textSize="22sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="租金试算"
-                        android:textColor="#717171" />
-            </LinearLayout>
-        </LinearLayout>
+                        android:gravity="right">
 
-        <!--房源标签-->
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:orientation="horizontal">
-
-            <!--一组-->
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:background="#ECF7F3"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="深呼吸1.0"
-                        android:textColor="#65B09C"
-                        android:textSize="13sp" />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="租金试算"
+                            android:textColor="#FF971E" />
+                </LinearLayout>
             </LinearLayout>
 
-            <!--一组-->
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:background="#F7F7F7"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="免物业费"
-                        android:textColor="#282828"
-                        android:textSize="13sp" />
-            </LinearLayout>
-            <!--一组-->
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:background="#F7F7F7"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="免物业费"
-                        android:textColor="#282828"
-                        android:textSize="13sp" />
-            </LinearLayout>
-            <!--一组-->
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:background="#F7F7F7"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="清语3.1"
-                        android:textColor="#282828"
-                        android:textSize="13sp" />
-            </LinearLayout>
-        </LinearLayout>
-        <!--房源现在信息是否转租-->
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:orientation="horizontal">
-
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="该房源转租中,预计2021.10.04可签约"
-                        android:textColor="#7A92AE"
-                        android:textSize="13sp" />
-            </LinearLayout>
-
+            <!--房源标签-->
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="right">
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                <!--一组-->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="#ECF7F3">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="深呼吸1.0"
+                            android:textColor="#65B09C"
+                            android:textSize="13sp" />
+                </LinearLayout>
+
+                <!--一组-->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="#F7F7F7">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="免物业费"
+                            android:textColor="#282828"
+                            android:textSize="13sp" />
+                </LinearLayout>
+                <!--一组-->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="#F7F7F7">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="离地铁近"
+                            android:textColor="#282828"
+                            android:textSize="13sp" />
+                </LinearLayout>
+                <!--一组-->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="#F7F7F7">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="清语3.1"
+                            android:textColor="#282828"
+                            android:textSize="13sp" />
+                </LinearLayout>
+<!--                &lt;!&ndash;一组&ndash;&gt;-->
+<!--                <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:background="#F7F7F7">-->
+
+<!--                    <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:layout_marginRight="5dp"-->
+<!--                            android:text="非首次"-->
+<!--                            android:textColor="#282828"-->
+<!--                            android:textSize="13sp" />-->
+<!--                </LinearLayout>-->
+            </LinearLayout>
+            <!--房源现在信息是否转租-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="该房源转租中,预计2021.10.04可签约"
+                            android:textColor="#7A92AE"
+                            android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="查看详细"
+                            android:textColor="#FF971E" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!--房屋属性 4-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+            <!--单项-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="查看详细"
-                        android:textColor="#7A92AE" />
+                        android:text="建筑面积"
+                        android:textColor="#606060"
+                        android:textSize="13sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="42.7㎡"
+                        android:textColor="#272727"
+                        android:textSize="20sp" />
+            </LinearLayout>
+            <!--单项-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="朝向"
+                        android:textColor="#606060"
+                        android:textSize="13sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="朝南"
+                        android:textColor="#272727"
+                        android:textSize="20sp" />
+            </LinearLayout>
+            <!--单项-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="户型"
+                        android:textColor="#606060"
+                        android:textSize="13sp" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="1室1厅1卫"
+                        android:textColor="#272727"
+                        android:textSize="20sp" />
+            </LinearLayout>
+            <!--单项-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="楼层"
+                        android:textColor="#606060"
+                        android:textSize="13sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="26/30"
+                        android:textColor="#272727"
+                        android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--信息详细-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+            <!--分4列  1-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="电梯"
+                        android:textColor="#656565"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="装修"
+                        android:textColor="#656565"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="门锁"
+                        android:textColor="#656565"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="入住"
+                        android:textColor="#656565"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="短期"
+                        android:textColor="#656565"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="小区"
+                        android:textColor="#656565"
+                        android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <!--分4列  2-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="有"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="整租3.1清语"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="智能门锁"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="预计2021-10-04可入住"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="可租一年"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="万达锦华城"
+                        android:textColor="#FD9720"
+                        android:textSize="15sp" />
+            </LinearLayout>
+            <!--分4列  3-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="年代"
+                        android:textColor="#656565"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="上架"
+                        android:textColor="#656565"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="绿化"
+                        android:textColor="#656565"
+                        android:textSize="15sp" />
+            </LinearLayout>
+            <!--分4列  4-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="2012年建成"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="非首次出租"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="20%"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--站点距离-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+            <!--分左右两个框-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                <!--单个图标+文字-->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp">
+
+                    <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/ding_wei" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6号线东光站"
+                            android:textSize="18sp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="步行街约382米"
+                            android:textSize="13sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!--分左右两个框-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp">
+
+                    <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/house_detailed_up" />
+                </LinearLayout>
+                <!--单个图标+文字-->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="通惠门"
+                            android:textSize="18sp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="自驾约33分钟"
+                            android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--数据...参考-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*数据仅供参考，请以实际看房为准"
+                    android:textColor="#CCCCCC"
+                    android:textSize="10sp" />
+        </LinearLayout>
+        <!--底部的框-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/house_detailed_box"
+                android:orientation="vertical"
+                android:layout_marginBottom="40dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp">
+            <!--头像+名字+找室友-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <!--第一行-->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_vertical">
+                    <!--图片-->
+                    <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/house_detailed_box_icon" />
+                    <!--title-->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="东湖-拼租圈"
+                            android:textColor="#262523"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    <!--font-->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TA们在找室友"
+                            android:textColor="#95928D"
+                            android:textSize="15sp" />
+                </LinearLayout>
+                <!--第二行 分左右-->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="附近有29人在找人拼租"
+                                android:textColor="#272624"
+                                android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right">
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/house_detailed_botton"
+                                android:text="去看看"
+                                android:textColor="#FFFEFB"
+                                android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-    <!--房屋属性 4-->
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:orientation="horizontal"
-            android:paddingRight="10dp">
-
-        <!--单项-->
-        <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="建筑面积"
-                    android:textColor="#606060"
-                    android:textSize="13sp" />
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="42.7㎡"
-                    android:textColor="#272727"
-                    android:textSize="20sp" />
-        </LinearLayout>
-        <!--单项-->
-        <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="朝向"
-                    android:textColor="#606060"
-                    android:textSize="13sp" />
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="朝南"
-                    android:textColor="#272727"
-                    android:textSize="20sp" />
-        </LinearLayout>
-        <!--单项-->
-        <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1.2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="户型"
-                    android:textColor="#606060"
-                    android:textSize="13sp" />
-
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="1室1厅1卫"
-                    android:textColor="#272727"
-                    android:textSize="20sp" />
-        </LinearLayout>
-        <!--单项-->
-        <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="楼层"
-                    android:textColor="#606060"
-                    android:textSize="13sp" />
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="26/30"
-                    android:textColor="#272727"
-                    android:textSize="20sp" />
-        </LinearLayout>
-
-    </LinearLayout>
-</LinearLayout>
+</ScrollView>
