@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".house_detailed">
+        tools:context=".House_detailed">
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -19,6 +19,7 @@
                 android:layout_marginBottom="20dp">
 
             <TextView
+                    android:id="@+id/house_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="万达锦华城"
@@ -35,11 +36,34 @@
                 android:layout_marginBottom="20dp">
 
             <ImageView
+                    android:id="@+id/house_images"
                     android:layout_width="match_parent"
                     android:layout_height="240dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/index_datas_1" />
         </LinearLayout>
+
+        <!--视频开关-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="right">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="视频展示" />
+
+            <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true" />
+        </LinearLayout>
+
         <!--商品属性部分-->
         <LinearLayout
                 android:layout_width="match_parent"
@@ -59,6 +83,7 @@
                         android:layout_height="wrap_content">
 
                     <TextView
+                            android:id="@+id/house_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="￥2560  月(季付价)"
@@ -151,22 +176,22 @@
                             android:textColor="#282828"
                             android:textSize="13sp" />
                 </LinearLayout>
-<!--                &lt;!&ndash;一组&ndash;&gt;-->
-<!--                <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginRight="10dp"-->
-<!--                        android:background="#F7F7F7">-->
+                <!--                &lt;!&ndash;一组&ndash;&gt;-->
+                <!--                <LinearLayout-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:background="#F7F7F7">-->
 
-<!--                    <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginLeft="5dp"-->
-<!--                            android:layout_marginRight="5dp"-->
-<!--                            android:text="非首次"-->
-<!--                            android:textColor="#282828"-->
-<!--                            android:textSize="13sp" />-->
-<!--                </LinearLayout>-->
+                <!--                    <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginLeft="5dp"-->
+                <!--                            android:layout_marginRight="5dp"-->
+                <!--                            android:text="非首次"-->
+                <!--                            android:textColor="#282828"-->
+                <!--                            android:textSize="13sp" />-->
+                <!--                </LinearLayout>-->
             </LinearLayout>
             <!--房源现在信息是否转租-->
             <LinearLayout
@@ -204,7 +229,7 @@
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="12dp"
                 android:layout_marginBottom="30dp"
                 android:orientation="horizontal"
                 android:paddingRight="10dp">
@@ -230,7 +255,7 @@
                         android:layout_height="wrap_content"
                         android:text="42.7㎡"
                         android:textColor="#272727"
-                        android:textSize="20sp" />
+                        android:textSize="18sp" />
             </LinearLayout>
             <!--单项-->
             <LinearLayout
@@ -253,7 +278,7 @@
                         android:layout_height="wrap_content"
                         android:text="朝南"
                         android:textColor="#272727"
-                        android:textSize="20sp" />
+                        android:textSize="18sp" />
             </LinearLayout>
             <!--单项-->
             <LinearLayout
@@ -277,7 +302,7 @@
                         android:gravity="center"
                         android:text="1室1厅1卫"
                         android:textColor="#272727"
-                        android:textSize="20sp" />
+                        android:textSize="18sp" />
             </LinearLayout>
             <!--单项-->
             <LinearLayout
@@ -300,7 +325,7 @@
                         android:layout_height="wrap_content"
                         android:text="26/30"
                         android:textColor="#272727"
-                        android:textSize="20sp" />
+                        android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
         <!--信息详细-->
@@ -489,7 +514,7 @@
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
@@ -539,7 +564,9 @@
             <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
                     android:layout_weight="1"
+                    android:gravity="right"
                     android:orientation="horizontal">
 
                 <LinearLayout
@@ -594,9 +621,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginBottom="40dp"
                 android:background="@drawable/house_detailed_box"
                 android:orientation="vertical"
-                android:layout_marginBottom="40dp"
                 android:paddingLeft="20dp"
                 android:paddingTop="20dp">
             <!--头像+名字+找室友-->
