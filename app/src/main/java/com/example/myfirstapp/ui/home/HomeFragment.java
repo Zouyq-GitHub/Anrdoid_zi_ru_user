@@ -105,34 +105,41 @@ public class HomeFragment extends Fragment {
         call.enqueue(new Callback() {
             @Override
             public void onResponse(Call arg0, Response response) throws IOException {
-                //success
-                String res = response.body().string();
-                //JSON转数组
-                try {
-                    JSONArray jsonArray = new JSONArray(res);
-                    //数据遍历
-                    RecyclerView recyclerView = v.findViewById(R.id.recycler_index_data);
-                    List<House> dataList = new ArrayList<>();
-                    for (int i = 0; i < jsonArray.length(); i++) {
-                        House house = new House();
-                        JSONObject jsonObject = jsonArray.getJSONObject(i);
-                        house.setH_id(jsonObject.getString("h_id"));
-                        house.setH_address(jsonObject.getString("h_address"));
-                        house.setH_space(jsonObject.getString("h_space"));
-                        house.setH_type(jsonObject.getString("h_type"));
-                        house.setH_price("￥" + jsonObject.getString("h_price") + "/月");
-                        house.setH_image(jsonObject.getString("h_image"));
-                        dataList.add(house);
+                getActivity().runOnUiThread(new Runnable() {
+                    public void run() {
+                        //JSON转数组
+                        try {
+                            //success
+//                            if (){
+//                                可以搞个本地存储 判定数据
+//                            }
+                            String res = response.body().string();
+                            JSONArray jsonArray = new JSONArray(res);
+                            //数据遍历
+                            RecyclerView recyclerView = v.findViewById(R.id.recycler_index_data);
+                            List<House> dataList = new ArrayList<>();
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                House house = new House();
+                                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                                house.setH_id(jsonObject.getString("h_id"));
+                                house.setH_address(jsonObject.getString("h_address"));
+                                house.setH_space(jsonObject.getString("h_space"));
+                                house.setH_type(jsonObject.getString("h_type"));
+                                house.setH_price("￥" + jsonObject.getString("h_price") + "/月");
+                                house.setH_image(jsonObject.getString("h_image"));
+                                dataList.add(house);
+                            }
+                            //---
+                            IndexDataAdapter indexDataAdapter = new IndexDataAdapter(getActivity(), dataList);
+                            recyclerView.setAdapter(indexDataAdapter);
+                            //布局  瀑布流                                            new StaggeredGridLayoutManager(8, StaggeredGridLayoutManager.HORIZONTAL);
+                            StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+                            recyclerView.setLayoutManager(staggeredGridLayoutManager);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
-                    //---
-                    IndexDataAdapter indexDataAdapter = new IndexDataAdapter(getActivity(), dataList);
-                    recyclerView.setAdapter(indexDataAdapter);
-                    //布局  瀑布流                                            new StaggeredGridLayoutManager(8, StaggeredGridLayoutManager.HORIZONTAL);
-                    StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-                    recyclerView.setLayoutManager(staggeredGridLayoutManager);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                });
             }
 
             @Override
