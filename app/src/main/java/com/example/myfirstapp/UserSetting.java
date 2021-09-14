@@ -99,6 +99,9 @@ public class UserSetting extends AppCompatActivity {
 
     //个人信息按钮
     private void userInformation() {
+        //获取用户id
+        Intent intent1 = getIntent();
+        String u_id = intent1.getStringExtra("u_id");
         //获取点击事件
         RelativeLayout relativeLayout = findViewById(R.id.g_r_x_x);
         relativeLayout.setOnClickListener(new View.OnClickListener() {
@@ -110,6 +113,8 @@ public class UserSetting extends AppCompatActivity {
                 } else {
                     //通用页面跳转设置
                     Intent intent = new Intent(UserSetting.this, UserData.class);
+                    //传值
+                    intent.putExtra("u_id", u_id);
                     //跳转
                     startActivity(intent);
                 }
@@ -119,6 +124,9 @@ public class UserSetting extends AppCompatActivity {
 
     //账号信息
     private void accountInformation() {
+        //获取用户id
+        Intent intent1 = getIntent();
+        String u_id = intent1.getStringExtra("u_id");
         //获取点击事件
         RelativeLayout relativeLayout = findViewById(R.id.z_h_x_x);
         relativeLayout.setOnClickListener(new View.OnClickListener() {
@@ -130,6 +138,8 @@ public class UserSetting extends AppCompatActivity {
                 } else {
                     //通用页面跳转设置
                     Intent intent = new Intent(UserSetting.this, AccountInformationManagement.class);
+                    //传值
+                    intent.putExtra("u_id", u_id);
                     //跳转
                     startActivity(intent);
                 }
@@ -263,7 +273,7 @@ public class UserSetting extends AppCompatActivity {
     //跳转用户页面
     private void goToUserHome() {
         Intent intent = new Intent(UserSetting.this, Index.class);
-        intent.putExtra("id",2);
+        intent.putExtra("id", 2);
         startActivity(intent);
 //        Fragment fragment = new DashboardFragment();
 //        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, fragment).commit();

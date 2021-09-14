@@ -34,6 +34,7 @@ public class DashboardFragment extends Fragment {
     private View view;
     private Button btn;
     private ImageView imageView;
+    private String user_id;
 
     @Nullable
     @Override
@@ -50,6 +51,7 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
         sheZhiIcon();
         communityLife();
         gotoLoginPage();
@@ -81,9 +83,15 @@ public class DashboardFragment extends Fragment {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent1 = getActivity().getIntent();//声明一个对象，并获得跳转过来的Intent对象
+                //从intent对象中获得bundle对象
+                Bundle bundle = intent1.getExtras();
                 Intent intent = new Intent(getActivity(), UserSetting.class); //跳转
                 //判定登录状态
-                if (loginState()) {
+                if (loginState() && bundle != null) {
+                    //传入用户ID
+                    String u_id = bundle.getString("u_id");
+                    intent.putExtra("u_id", u_id);
                     intent.putExtra("loginState", "true");
                 }
                 startActivity(intent);
@@ -121,7 +129,6 @@ public class DashboardFragment extends Fragment {
             //从intent对象中获得bundle对象
             Bundle bundle = intent.getExtras();
             //从bundle对象中提取数据 空指针异常
-            String user_id;
             if (bundle == null) {
                 return false;
             } else {
@@ -200,7 +207,7 @@ public class DashboardFragment extends Fragment {
     }
 
     //
-    private void Doller(){
+    private void Doller() {
         TextView textView = getActivity().findViewById(R.id.userStorage);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
