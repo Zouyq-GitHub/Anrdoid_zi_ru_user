@@ -36,9 +36,13 @@ public class User_new_name_activity extends AppCompatActivity {
         //获取用户昵称
         Intent intent = getIntent();
         String username = intent.getStringExtra("u_username");
+        String u_id = intent.getStringExtra("u_id");
         //显示当前用户昵称
         editText.setText(username);
         new_name_submit();
+
+
+
     }
 
     //提交新名称
@@ -83,11 +87,16 @@ public class User_new_name_activity extends AppCompatActivity {
                     }
                 });
                 //页面跳转回页面DATA
-                Intent intent = new Intent(User_new_name_activity.this, UserData.class);
+//                Intent intent = new Intent(User_new_name_activity.this, UserData.class);
+//                //传值
+//                intent.putExtra("u_id", u_id);
+//                //跳转
+//                startActivity(intent);
                 //传值
+                Intent intent = new Intent();
                 intent.putExtra("u_id", u_id);
-                //跳转
-                startActivity(intent);
+                setResult(2, intent);
+                finish();
             }
         });
     }

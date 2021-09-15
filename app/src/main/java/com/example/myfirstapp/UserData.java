@@ -151,6 +151,7 @@
 
 package com.example.myfirstapp;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -214,10 +215,22 @@ public class UserData extends AppCompatActivity {
         call.enqueue(new Callback() {
             @Override
             public void onResponse(Call arg0, Response response) throws IOException {
-                Looper.prepare();//增加部分
-                String res = response.body().string();
-                updateUserData(res);
-                Looper.loop();//增加部分
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+//                        Looper.prepare();//增加部分
+                        String res = null;
+                        try {
+                            res = response.body().string();
+                            updateUserData(res);
+//                            Looper.loop();//增加部分
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+
+
             }
 
             @Override
@@ -253,13 +266,21 @@ public class UserData extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //通用页面跳转设置
-                Intent intent = new Intent(UserData.this, User_new_name_activity.class);
+                Intent intent = new Intent();
+                intent.setClass(UserData.this, User_new_name_activity.class);
                 //传值
                 intent.putExtra("u_username", user.getU_name());
                 intent.putExtra("u_id", user.getU_id());
                 //跳转
-                startActivity(intent);
+                startActivityForResult(intent, 2);
             }
         });
+    }
+
+    // finish()回调
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        sendUserIdByUserData();
     }
 }
