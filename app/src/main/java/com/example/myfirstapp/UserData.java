@@ -188,6 +188,7 @@ public class UserData extends AppCompatActivity {
         setContentView(R.layout.activity_user_data);
         sendUserIdByUserData();
         newUserName();
+        newUserPhoto();
     }
 
     @Override
@@ -230,6 +231,7 @@ public class UserData extends AppCompatActivity {
                     }
                 });
             }
+
             @Override
             public void onFailure(Call arg0, IOException arg1) {
                 // 响应失败
@@ -270,6 +272,17 @@ public class UserData extends AppCompatActivity {
                 intent.putExtra("u_id", user.getU_id());
                 //跳转
                 startActivityForResult(intent, 2);
+            }
+        });
+    }
+
+    //用户修改头像
+    private void newUserPhoto() {
+        imageView = findViewById(R.id.user_data_img_id);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("用户头像修改");
             }
         });
     }

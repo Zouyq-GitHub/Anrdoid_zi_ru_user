@@ -87,11 +87,6 @@ public class User_new_name_activity extends AppCompatActivity {
                     }
                 });
                 //页面跳转回页面DATA
-//                Intent intent = new Intent(User_new_name_activity.this, UserData.class);
-//                //传值
-//                intent.putExtra("u_id", u_id);
-//                //跳转
-//                startActivity(intent);
                 //传值
                 Intent intent = new Intent();
                 intent.putExtra("u_id", u_id);

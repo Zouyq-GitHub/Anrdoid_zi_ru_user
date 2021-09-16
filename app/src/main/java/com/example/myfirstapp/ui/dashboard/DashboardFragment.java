@@ -204,6 +204,7 @@ public class DashboardFragment extends Fragment {
     }
 
     //finish回调
+    //2 -- 修改名称
     //3 -- 登录页面回调
     //4 -- 设置
 
