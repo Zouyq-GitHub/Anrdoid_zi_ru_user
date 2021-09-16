@@ -274,7 +274,8 @@ public class UserSetting extends AppCompatActivity {
     private void goToUserHome() {
         Intent intent = new Intent(UserSetting.this, Index.class);
         intent.putExtra("id", 2);
-        startActivity(intent);
+        setResult(3, intent);
+        finish();
 //        Fragment fragment = new DashboardFragment();
 //        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, fragment).commit();
     }

@@ -78,9 +78,7 @@ public class ZiRuLogin extends AppCompatActivity {
                 Gson gson = new Gson();
                 user = gson.fromJson(res, User.class);
                 //页面跳转
-//                Intent intent = new Intent(ZiRuLogin.this, NotLoginUser.class);
-                Intent intent = new Intent(ZiRuLogin.this, Index.class);
-                intent.putExtra("id",2);
+                Intent intent = new Intent();
                 //跳转
                 //传用户对象做登录验证及信息录入
                 Bundle bundle = new Bundle();//声明一个Bundle对象，用来存放数据
@@ -89,8 +87,8 @@ public class ZiRuLogin extends AppCompatActivity {
                 bundle.putString("u_name", user.getU_name());
                 bundle.putString("u_phone", user.getU_phone());
                 bundle.putString("u_vip", user.getU_vip());
-                intent.putExtras(bundle);//将这个bundle绑定在intent上
-                startActivity(intent);
+                setResult(3, getIntent().putExtras(bundle));
+                finish();
             }
 
             @Override

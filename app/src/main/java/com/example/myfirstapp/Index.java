@@ -1,6 +1,7 @@
 package com.example.myfirstapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -75,4 +76,13 @@ public class Index extends AppCompatActivity {
         });
     }
 
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        System.out.println("你说index会有回调吗");
+//        //获取用户名
+//        Intent intent = getIntent();
+//        String test = intent.getStringExtra("test");
+//        System.out.println(test);
+//    }
 }

@@ -229,10 +229,7 @@ public class UserData extends AppCompatActivity {
                         }
                     }
                 });
-
-
             }
-
             @Override
             public void onFailure(Call arg0, IOException arg1) {
                 // 响应失败

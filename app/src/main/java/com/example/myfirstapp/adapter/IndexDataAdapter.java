@@ -96,5 +96,4 @@ public class IndexDataAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             h_type = view.findViewById(R.id.h_type);
         }
     }
-
 }
