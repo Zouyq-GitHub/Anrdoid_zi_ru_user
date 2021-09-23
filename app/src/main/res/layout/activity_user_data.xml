@@ -55,12 +55,20 @@
                     android:background="@drawable/home_user_phone_background"
                     android:gravity="center">
 
-                <com.example.myfirstapp.Img_border_radius
-                        android:id="@+id/user_data_img_id"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_centerHorizontal="true"
-                        android:src="@drawable/user_img" />
+<!--                <com.example.myfirstapp.Img_border_radius-->
+<!--                        android:id="@+id/user_data_img_id"-->
+<!--                        android:layout_width="60dp"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:layout_centerHorizontal="true"-->
+<!--                        android:src="@drawable/user_img" />-->
+                <!--圆形图片-->
+                <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_head"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:onClick="changeAvatar"
+                        android:src="@mipmap/ic_launcher"
+                        app:shapeAppearanceOverlay="@style/circleImageStyle" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

@@ -207,6 +207,8 @@ public class DashboardFragment extends Fragment {
     //2 -- 修改名称
     //3 -- 登录页面回调
     //4 -- 设置
+    //5 -- 系统相册
+    //6 -- 拍照
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

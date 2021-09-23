@@ -39,14 +39,16 @@
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_index.xml" value="0.166796875" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_layout_dialog.xml" value="0.111328125" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_user_data.xml" value="0.111328125" />
+        <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_user_data.xml" value="0.1" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_user_new_name.xml" value="0.19609375" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_user_setting.xml" value="0.162890625" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/activity_ziru_login.xml" value="0.25" />
+        <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/dialog_bottom.xml" value="0.22" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.22109375" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/fragment_notifications.xml" value="0.10771369006254343" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/test_add_layout.xml" value="0.105078125" />
+        <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/layout/user_photo_select.xml" value="0.18671875" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/menu/navigation.xml" value="0.14" />
         <entry key="..\:/AudroidProject/myFirstApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
